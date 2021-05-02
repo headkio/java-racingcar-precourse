@@ -61,7 +61,7 @@ public class RacingGameManager {
         setMoveCount(moveCount);
 
         while (moveCount != 0) {
-            // racingCars.moveCars();
+            racingCars.moveCars();
             // setRanking(racingCars);
             // printCarLocations();
         }

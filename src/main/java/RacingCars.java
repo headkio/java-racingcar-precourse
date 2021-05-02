@@ -11,4 +11,10 @@ public class RacingCars {
     public void addRacingCar(RacingCar racingCar) {
         racingCars.add(racingCar);
     }
+
+    public void moveCars() {
+        for (RacingCar racingCar : racingCars) {
+            racingCar.move();
+        }
+    }
 }
