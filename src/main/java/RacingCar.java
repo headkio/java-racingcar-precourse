@@ -44,9 +44,9 @@ public class RacingCar implements Comparable<RacingCar>{
     @Override
     public int compareTo(RacingCar racingCar) {
         if (this.getMoveDistance() > racingCar.getMoveDistance()) {
-            return 1;
-        } else if (this.getMoveDistance() < racingCar.getMoveDistance()) {
             return -1;
+        } else if (this.getMoveDistance() < racingCar.getMoveDistance()) {
+            return 1;
         }
 
         return 0;
