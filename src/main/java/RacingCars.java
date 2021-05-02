@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -21,6 +22,29 @@ public class RacingCars {
     public void printLocation() {
         for (RacingCar racingCar : racingCars) {
             System.out.print(racingCar.getCarName() + " : " + racingCar.getMoveDistanceWithDash());
+        }
+    }
+
+    public List<RacingCar> getWinners() {
+        if (racingCars.size() == 0) {
+            return null;
+        }
+
+        List<RacingCar> winnerList = new ArrayList<RacingCar>();
+        Collections.sort(racingCars);
+
+        for (RacingCar racingCar : racingCars) {
+            addWinner(winnerList, racingCar);
+        }
+
+        return winnerList;
+    }
+
+    private  void addWinner(List<RacingCar> winnerList, RacingCar racingCar) {
+        int winnerDistance = racingCars.get(0).getMoveDistance();
+
+        if (racingCar.getMoveDistance() == winnerDistance) {
+            winnerList.add(racingCar);
         }
     }
 }

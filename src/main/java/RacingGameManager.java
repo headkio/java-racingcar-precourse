@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class RacingGameManager {
     private int moveCount = 0;
@@ -42,7 +42,7 @@ public class RacingGameManager {
     }
 
     private void printResult() {
-
+        List<RacingCar> winnerList  = racingCars.getWinners();
     }
 
     public void start() {

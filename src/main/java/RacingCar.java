@@ -1,4 +1,4 @@
-public class RacingCar {
+public class RacingCar implements Comparable<RacingCar>{
     public static int MIN_DISTANCE_FOR_MOVE = 4;
 
     private String carName;
@@ -39,5 +39,16 @@ public class RacingCar {
         }
 
         return distanceWithDash;
+    }
+
+    @Override
+    public int compareTo(RacingCar racingCar) {
+        if (this.getMoveDistance() > racingCar.getMoveDistance()) {
+            return 1;
+        } else if (this.getMoveDistance() < racingCar.getMoveDistance()) {
+            return -1;
+        }
+
+        return 0;
     }
 }
