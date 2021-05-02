@@ -1,4 +1,6 @@
 public class RacingCar {
+    public static int MIN_DISTANCE_FOR_MOVE = 4;
+
     private String carName;
     private int moveDistance;
 
@@ -21,7 +23,6 @@ public class RacingCar {
     public void move() {
         final int MIN_NUM = 0;
         final int MAX_NUM = 9;
-        final int MIN_DISTANCE_FOR_MOVE = 4;
 
         int moveDistance = (int)(Math.random() * (MAX_NUM - MIN_NUM)) + MIN_NUM;
 
