@@ -21,8 +21,10 @@ public class RacingCars {
 
     public void printLocation() {
         for (RacingCar racingCar : racingCars) {
-            System.out.print(racingCar.getCarName() + " : " + racingCar.getMoveDistanceWithDash());
+            System.out.println(racingCar.getCarName() + " : -" + racingCar.getMoveDistanceWithDash());
         }
+
+        System.out.println();
     }
 
     public List<RacingCar> getWinners() {

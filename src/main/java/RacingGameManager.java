@@ -27,10 +27,14 @@ public class RacingGameManager {
     }
 
     public int inputMoveCount() {
+        return 5;
+
+        /*
         System.out.println("시도할 회수는 몇회인가요?");
         Scanner scanner = new Scanner(System.in);
         int moveCount = scanner.nextInt();
         return moveCount;
+         */
     }
 
     public void setMoveCount(int moveCount) {
@@ -42,7 +46,17 @@ public class RacingGameManager {
     }
 
     private void printResult() {
+        final String CAR_NAME_SPERATOR = ", ";
+
         List<RacingCar> winnerList  = racingCars.getWinners();
+        String winnerNames = "";
+
+        for (RacingCar winner : winnerList) {
+            winnerNames += (winner.getCarName() + CAR_NAME_SPERATOR);
+        }
+
+        winnerNames = winnerNames.substring(0, winnerNames.lastIndexOf(CAR_NAME_SPERATOR));
+        System.out.println(winnerNames + " 가 최종 우승했습니다.");
     }
 
     public void start() {
@@ -52,7 +66,7 @@ public class RacingGameManager {
         int moveCount = inputMoveCount();
         setMoveCount(moveCount);
 
-        while (moveCount != 0) {
+        for (int i = 0; i < moveCount; i++) {
             racingCars.moveCars();
             racingCars.printLocation();
         }
