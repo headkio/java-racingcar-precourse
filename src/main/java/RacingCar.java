@@ -30,4 +30,14 @@ public class RacingCar {
             setMoveDistance(getMoveDistance() + moveDistance);
         }
     }
+
+    public String getMoveDistanceWithDash() {
+        String distanceWithDash = "";
+
+        for (int i = 0; i < moveDistance; i++) {
+            distanceWithDash += "-";
+        }
+
+        return distanceWithDash;
+    }
 }

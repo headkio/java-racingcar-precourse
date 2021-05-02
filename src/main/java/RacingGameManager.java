@@ -41,10 +41,6 @@ public class RacingGameManager {
         return this.moveCount;
     }
 
-    private void printCarLocations() {
-
-    }
-
     private void printResult() {
 
     }
@@ -58,7 +54,7 @@ public class RacingGameManager {
 
         while (moveCount != 0) {
             racingCars.moveCars();
-            // printCarLocations();
+            racingCars.printLocation();
         }
 
         printResult();

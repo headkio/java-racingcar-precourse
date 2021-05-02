@@ -17,4 +17,10 @@ public class RacingCars {
             racingCar.move();
         }
     }
+
+    public void printLocation() {
+        for (RacingCar racingCar : racingCars) {
+            System.out.print(racingCar.getCarName() + " : " + racingCar.getMoveDistanceWithDash());
+        }
+    }
 }
