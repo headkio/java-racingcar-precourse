@@ -41,10 +41,6 @@ public class RacingGameManager {
         return this.moveCount;
     }
 
-    private void setRanking() {
-
-    }
-
     private void printCarLocations() {
 
     }
@@ -62,7 +58,6 @@ public class RacingGameManager {
 
         while (moveCount != 0) {
             racingCars.moveCars();
-            // setRanking(racingCars);
             // printCarLocations();
         }
 
