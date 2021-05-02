@@ -26,8 +26,19 @@ public class RacingGameManager {
         }
     }
 
-    private void setMoveCount() {
+    public int inputMoveCount() {
+        System.out.println("시도할 회수는 몇회인가요?");
+        Scanner scanner = new Scanner(System.in);
+        int moveCount = scanner.nextInt();
+        return moveCount;
+    }
 
+    public void setMoveCount(int moveCount) {
+        this.moveCount = moveCount;
+    }
+
+    public int getMoveCount() {
+        return this.moveCount;
     }
 
     private void setRanking() {
@@ -46,13 +57,14 @@ public class RacingGameManager {
         String[] carNames = inputRacingCars();
         setRacingCars(carNames);
 
-        setMoveCount();
+        int moveCount = inputMoveCount();
+        setMoveCount(moveCount);
 
-        //while (moveCount != 0) {
+        while (moveCount != 0) {
             // racingCars.moveCars();
             // setRanking(racingCars);
             // printCarLocations();
-        //}
+        }
 
         printResult();
     }
